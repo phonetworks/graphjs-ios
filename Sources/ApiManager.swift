@@ -3,7 +3,7 @@
 //  GraphJS-iOS
 //
 //  Created by CAMOBAP on 8/30/18.
-//  Copyright © 2018 Dial-Once. All rights reserved.
+//  Copyright © 2018 Pho Networks. All rights reserved.
 //
 
 import Foundation

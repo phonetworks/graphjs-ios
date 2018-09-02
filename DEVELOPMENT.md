@@ -17,3 +17,8 @@
 
  - Select `GraphJSTests` schema
  - Command+U
+
+OR
+
+ - Open terminal & switch to project directory
+ - Run `xcodebuild -project GraphJS-iOS.xcodeproj -scheme GraphJSTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=11.4'`

@@ -211,7 +211,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Dial-Once";
+				ORGANIZATIONNAME = "Pho Networks";
 				TargetAttributes = {
 					E6508F5921395936002C959C = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -327,7 +327,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phonetwork.graphjs.TestHostApp;
+				PRODUCT_BUNDLE_IDENTIFIER = org.phonetworks.graphjs.TestHostApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,7 +344,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phonetwork.graphjs.TestHostApp;
+				PRODUCT_BUNDLE_IDENTIFIER = org.phonetworks.graphjs.TestHostApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -488,7 +488,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phonetwork.graphjs.Client;
+				PRODUCT_BUNDLE_IDENTIFIER = org.phonetworks.graphjs.Client;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -515,7 +515,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phonetwork.graphjs.Client;
+				PRODUCT_BUNDLE_IDENTIFIER = org.phonetworks.graphjs.Client;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
