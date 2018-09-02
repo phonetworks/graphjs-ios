@@ -1,5 +1,5 @@
 //
-//  GraphJsCallResults.swift
+//  Results.swift
 //  GraphJS
 //
 //  Created by CAMOBAP on 8/31/18.

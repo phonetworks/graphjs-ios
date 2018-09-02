@@ -14,9 +14,9 @@
 		E66B5724213B06B9002D1499 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66B5723213B06B9002D1499 /* Error.swift */; };
 		E6A287A5213A740300D8FFF6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A287A4213A740300D8FFF6 /* Models.swift */; };
 		E6C2741B213743B0007D0172 /* GraphJS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C27411213743B0007D0172 /* GraphJS.framework */; };
-		E6C27420213743B0007D0172 /* ApiManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C2741F213743B0007D0172 /* ApiManagerTests.swift */; };
+		E6C27420213743B0007D0172 /* GraphJSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C2741F213743B0007D0172 /* GraphJSTests.swift */; };
 		E6C27422213743B0007D0172 /* GraphJS-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C27414213743B0007D0172 /* GraphJS-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6C2742C21374418007D0172 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C2742B21374418007D0172 /* ApiManager.swift */; };
+		E6C2742C21374418007D0172 /* GraphJS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C2742B21374418007D0172 /* GraphJS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +50,9 @@
 		E6C27414213743B0007D0172 /* GraphJS-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GraphJS-iOS.h"; sourceTree = "<group>"; };
 		E6C27415213743B0007D0172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6C2741A213743B0007D0172 /* GraphJSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphJSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6C2741F213743B0007D0172 /* ApiManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerTests.swift; sourceTree = "<group>"; };
+		E6C2741F213743B0007D0172 /* GraphJSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphJSTests.swift; sourceTree = "<group>"; };
 		E6C27421213743B0007D0172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6C2742B21374418007D0172 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		E6C2742B21374418007D0172 /* GraphJS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphJS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 			children = (
 				E6C27414213743B0007D0172 /* GraphJS-iOS.h */,
 				E6C27415213743B0007D0172 /* Info.plist */,
-				E6C2742B21374418007D0172 /* ApiManager.swift */,
+				E6C2742B21374418007D0172 /* GraphJS.swift */,
 				E6508F5421394ACB002C959C /* Results.swift */,
 				E6A287A4213A740300D8FFF6 /* Models.swift */,
 				E66B5723213B06B9002D1499 /* Error.swift */,
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				E6508F5B21395936002C959C /* HostApp */,
-				E6C2741F213743B0007D0172 /* ApiManagerTests.swift */,
+				E6C2741F213743B0007D0172 /* GraphJSTests.swift */,
 				E6C27421213743B0007D0172 /* Info.plist */,
 			);
 			path = Tests;
@@ -287,7 +287,7 @@
 			files = (
 				E66B5724213B06B9002D1499 /* Error.swift in Sources */,
 				E6508F5521394ACB002C959C /* Results.swift in Sources */,
-				E6C2742C21374418007D0172 /* ApiManager.swift in Sources */,
+				E6C2742C21374418007D0172 /* GraphJS.swift in Sources */,
 				E6A287A5213A740300D8FFF6 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6C27420213743B0007D0172 /* ApiManagerTests.swift in Sources */,
+				E6C27420213743B0007D0172 /* GraphJSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +535,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phonetwork.graphjs.GraphJS-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.phonetworks.graphjs.GraphJS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -555,7 +555,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phonetwork.graphjs.GraphJS-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.phonetworks.graphjs.GraphJS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

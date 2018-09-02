@@ -1,6 +1,6 @@
 //
-//  GraphJsApiManager.swift
-//  GraphJS-iOS
+//  GraphJS.swift
+//  GraphJS
 //
 //  Created by CAMOBAP on 8/30/18.
 //  Copyright © 2018 Pho Networks. All rights reserved.
@@ -11,8 +11,8 @@ import os
 import os.log
 
 @objc
-class GraphJsApiManager : NSObject {
-    static let log = OSLog(subsystem: "com.phonetwork.graphjs-ios", category: "ApiManager")
+class GraphJS : NSObject {
+    static let log = OSLog(subsystem: "org.phonetworks.graphjs-ios", category: "GraphJS")
     static let cookieExpirationInterval : TimeInterval = 10 * 60 // 10 min
 
     let urlSession = URLSession(configuration: .default)
@@ -71,7 +71,7 @@ class GraphJsApiManager : NSObject {
                     cookieProperties[HTTPCookiePropertyKey.path]    = "/"
                     cookieProperties[HTTPCookiePropertyKey.version] = NSNumber(value: 0)
                     cookieProperties[HTTPCookiePropertyKey.expires] = NSDate()
-                            .addingTimeInterval(GraphJsApiManager.cookieExpirationInterval)
+                            .addingTimeInterval(GraphJS.cookieExpirationInterval)
 
                     cookieStorage.setCookie(HTTPCookie(properties: cookieProperties)!)
 
@@ -781,7 +781,7 @@ class GraphJsApiManager : NSObject {
 
         urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
 
-        os_log("Request: %@", log: GraphJsApiManager.log, type: .debug, urlRequest.url?.absoluteString ?? "unknown")
+        os_log("Request: %@", log: GraphJS.log, type: .debug, urlRequest.url?.absoluteString ?? "unknown")
 
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, responce, error) in
             var requestFailed = true
@@ -789,13 +789,13 @@ class GraphJsApiManager : NSObject {
             // TODO check error before
 
             if let httpResponse = responce as? HTTPURLResponse {
-                os_log("Response: %d %@", log: GraphJsApiManager.log, type: .debug,
+                os_log("Response: %d %@", log: GraphJS.log, type: .debug,
                        httpResponse.statusCode, String(data: data!, encoding: .utf8)!)
                 requestFailed = httpResponse.statusCode >= 400
             }
 
             if requestFailed {
-                os_log("Request failed wit error: %@", log: GraphJsApiManager.log, type: .error, error.debugDescription)
+                os_log("Request failed wit error: %@", log: GraphJS.log, type: .error, error.debugDescription)
                 if error != nil {
                     callback(data, responce, error)
                 } else {
@@ -806,7 +806,7 @@ class GraphJsApiManager : NSObject {
                 callback(data, responce, error)
             }
 
-            os_log("----", log: GraphJsApiManager.log, type: .debug)
+            os_log("----", log: GraphJS.log, type: .debug)
         }
 
         task.resume()

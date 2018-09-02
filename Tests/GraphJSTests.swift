@@ -1,6 +1,6 @@
 //
-//  ApiManagerTests.swift
-//  ApiManagerTests
+//  GraphJSTests.swift
+//  GraphJSTests
 //
 //  Created by CAMOBAP on 8/30/18.
 //  Copyright © 2018 Pho Networks. All rights reserved.
@@ -10,7 +10,7 @@ import XCTest
 
 @testable import GraphJS
 
-class ApiManagerTests: XCTestCase {
+class GraphJSTests: XCTestCase {
 
     // Test data can be generated with https://github.com/esokullu/graphjs-website/tree/master/scripts/data-gen
     struct Constants {
@@ -26,7 +26,7 @@ class ApiManagerTests: XCTestCase {
         static let publicId = "79982844-6a27-4b3b-b77f-419a79be0e10"
     }
 
-    let subject = GraphJsApiManager(publicId: Constants.publicId,
+    let subject = GraphJS(publicId: Constants.publicId,
         serverUrl: Constants.serverUrl,
         debugEnabled: true)
 

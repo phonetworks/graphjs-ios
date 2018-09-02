@@ -1,5 +1,5 @@
 //
-//  GraphJsModels.swift
+//  Models.swift
 //  GraphJS
 //
 //  Created by CAMOBAP on 9/1/18.
