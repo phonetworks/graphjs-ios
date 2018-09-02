@@ -42,11 +42,11 @@ struct UserProfile: Codable {
         self.username = try values.decode(String.self, forKey: .username)
         self.email = try values.decode(String.self, forKey: .email)
         self.joinTime = try values.decode(Date.self, forKey: .joinTime)
-        self.avatar = URL(string: try values.decode(String.self, forKey: .avatar))
-        self.about = try values.decode(String.self, forKey: .about)
-        self.followerCount = try values.decode(Int.self, forKey: .followerCount)
-        self.followingCount = try values.decode(Int.self, forKey: .followingCount)
-        self.membershipCount = try values.decode(Int.self, forKey: .membershipCount)
+        self.avatar = URL(string: try values.decodeIfPresent(String.self, forKey: .avatar) ?? "")
+        self.about = try values.decodeIfPresent(String.self, forKey: .about)
+        self.followerCount = try values.decodeIfPresent(Int.self, forKey: .followerCount) ?? 0
+        self.followingCount = try values.decodeIfPresent(Int.self, forKey: .followingCount) ?? 0
+        self.membershipCount = try values.decodeIfPresent(Int.self, forKey: .membershipCount) ?? 0
 
         let birthDayString = try values.decode(String.self, forKey: .birthday)
         let birthdayFormatter = DateFormatter()
@@ -72,7 +72,7 @@ struct ForumThread: Codable {
     let id: String
     let title: String
     let authorId: String
-    let createdAt: Date
+    let createdAt: Date?
     let contributors: [String: UserProfile]
 
     init(id: String, title: String, authorId: String, createdAt: Date, contributors: [String: UserProfile]) {
@@ -81,6 +81,20 @@ struct ForumThread: Codable {
         self.authorId = authorId
         self.createdAt = createdAt
         self.contributors = contributors
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+
+        self.id = try values.decode(String.self, forKey: .id)
+        self.title = try values.decode(String.self, forKey: .title)
+        self.authorId = try values.decode(String.self, forKey: .authorId)
+        self.contributors = try values.decode([String: UserProfile].self, forKey: .contributors)
+        if let createdAt = TimeInterval(try values.decode(String.self, forKey: .createdAt)) {
+            self.createdAt = Date(timeIntervalSince1970: createdAt)
+        } else {
+            self.createdAt = nil
+        }
     }
 
     enum CodingKeys: String, CodingKey {
