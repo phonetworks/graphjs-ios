@@ -22,7 +22,7 @@ class GraphJSTests: XCTestCase {
         static let alice = "alice"
         static let bob = "bob"
 
-        static let serverUrl = URL(string: "http://localhost:1338/")! // emulator host
+        static let serverUrl = URL(string: "http://127.0.0.1:1338/")! // emulator host
         static let publicId = "79982844-6a27-4b3b-b77f-419a79be0e10"
     }
 
