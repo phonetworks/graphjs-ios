@@ -1,4 +1,4 @@
-# GraphJS-Android
+# GraphJS-iOS
 
 GraphJS-iOS is a Swift client-side library to help developers easily enable social features on their mobile apps. With only a few lines of code, you can easily add authentication, comments, messages, forum, groups, profiles etc. to your static web pages. 
 
